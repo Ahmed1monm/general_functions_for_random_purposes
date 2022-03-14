@@ -1,9 +1,9 @@
-String getSubString(String data) {
+String getTheFirstNofWordsInString(String data, int numberOfWords) {
   int count = 0;
   String subData = '';
 
   for (int i = 0; i < data.length - 1; i++) {
-    if (count == 10) {
+    if (count == numberOfWords) {
       break;
     }
     if (data[i] == ' ') {
@@ -13,6 +13,6 @@ String getSubString(String data) {
       subData = subData + data[i];
     }
   }
-  print(count);
+
   return subData;
 }
